@@ -22,7 +22,7 @@ class CartaDiCredito{
         $this->DataDiScadenza = $_DataDiScadenza;
     }
     public function getTitolare(){
-        return $this->DataDiScadenza;
+        return $this->titolare;
     }
     public function setTitolare($_titolare){
         $this->titolare = $_titolare;

@@ -31,8 +31,20 @@ $usersRegistered->setCards($carta2);
     <h1> nome: <?php echo $user->getNome().' '. $user->getCognome() ?> </h1>
     <h2> email: <?php echo $user->getEmail()?> </h2>
     <h2> età: <?php echo $user->getEta()?> </h2>
-    <h3><?php foreach($carte as $key => $value){
-        echo $value;
+    <h3><?php foreach($user->getCarte() as $key => $value){ 
+        echo $value->getSerialNumber().' '; 
+        echo $value->getDataDiScadenza().' ';
+        echo $value->getTitolare().' ';
+    } ?></h3>
+    <br>
+    <h1> nome: <?php echo $usersRegistered->getNome().' '. $user->getCognome() ?> </h1>
+    <h2> email: <?php echo $usersRegistered->getEmail()?> </h2>
+    <h2> età: <?php echo $usersRegistered->getEta()?> </h2>
+    <h2> sconto: <?php echo $usersRegistered->getSconto()?> </h2>
+    <h3><?php foreach($usersRegistered->getCarte() as $key => $value){ 
+        echo $value->getSerialNumber().' '; 
+        echo $value->getDataDiScadenza().' ';
+        echo $value->getTitolare().' ';
     } ?></h3>
 </body>
 </html>

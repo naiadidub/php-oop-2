@@ -26,6 +26,9 @@ class Utente {
     public function getEta() {
         return $this->eta;
     }
+    public function getCarte() {
+        return $this->carte;
+    }
 
     public function setNome($_nome) {
         $this->nome = $_nome;
